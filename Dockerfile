@@ -1,6 +1,5 @@
 FROM ubuntu:18.04
 
-ARG http_port=9999
 ARG testerum_version
 ARG testerum_download_url=https://testerum.com/download/testerum-linux-${testerum_version}.tar.gz
 

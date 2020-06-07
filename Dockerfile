@@ -47,14 +47,14 @@ RUN apt -y install ttf-ubuntu-font-family
 
 RUN echo "Install Mozilla Firefox"
 RUN apt -y install firefox
-RUN echo "$(firefox -version)" >> $TESTERUM_VERSION_FILE
+RUN firefox -version >> $TESTERUM_VERSION_FILE
 
 RUN echo "Install Google Chrome"
 ARG chrome_package='google-chrome-stable_current_amd64.deb'
 RUN wget -O $chrome_package  https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 RUN dpkg -i $chrome_package || apt -y -f install
 RUN rm $chrome_package
-RUN echo "$(google-chrome --version)" >> $TESTERUM_VERSION_FILE
+RUN google-chrome --version >> $TESTERUM_VERSION_FILE
 
 COPY ./src/wrap_chrome_binary.sh wrap_chrome_binary.sh
 RUN chmod a+x wrap_chrome_binary.sh && ./wrap_chrome_binary.sh && rm -rfv ./wrap_chrome_binary.sh

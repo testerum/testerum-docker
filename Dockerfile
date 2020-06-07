@@ -70,4 +70,4 @@ WORKDIR $TESTERUM_ROOT_DIR/testerum
 
 # RUN sed -i 's/-Dfile.encoding=UTF8/-Dfile.encoding=UTF8 -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=8000/' ./runner/bin/testerum-runner.sh
 
-ENTRYPOINT ["./runner/bin/testerum-runner.sh"]
+ENTRYPOINT ["${TESTERUM_ROOT_DIR}/testerum/runner/bin/testerum-runner.sh"]

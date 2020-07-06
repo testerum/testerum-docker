@@ -1,1 +1,2 @@
-docker run --rm -e repository-directory='c:\programing\workspace\testerum\integration-tests\tests' --name testerum testerum:1.2
+docker run --rm -v /home/cvmocanu/temp/tests:/tests -v /home/cvmocanu/temp/reports:/reports --name testerum testerum:1.2
+

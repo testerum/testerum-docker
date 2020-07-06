@@ -71,6 +71,9 @@ COPY docker/entrypoint.sh $TESTERUM_ROOT_DIR/testerum/
 
 # RUN sed -i 's/-Dfile.encoding=UTF8/-Dfile.encoding=UTF8 -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=8000/' ./runner/bin/testerum-runner.sh
 
+RUN mkdir /reports/
+RUN chown $uid:$gid /reports/
+
 USER $uid:$gid
 
 ENTRYPOINT ["/opt/testerum_home/testerum/entrypoint.sh"]

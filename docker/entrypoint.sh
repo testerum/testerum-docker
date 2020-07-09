@@ -7,7 +7,7 @@ if [ ! -d "/tests" ]; then
     exit 1
 fi
 
-echo "Starting Testerum..."
+echo "Starting Testerum Runner..."
 
 exec "${TESTERUM_DIR}/runner/bin/testerum-runner.sh" \
     --repository-directory=/tests \

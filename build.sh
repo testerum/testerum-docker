@@ -2,7 +2,7 @@
 
 export version=3.1.19
 docker build \
-    --tag testerum:$version \
-    --tag testerum:latest \
     --build-arg testerum_version=$version \
+    --tag testerum/testerum:$version \
+    --tag testerum/testerum:latest \
     .

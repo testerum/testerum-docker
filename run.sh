@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 
-docker run --rm -v /home/cvmocanu/temp/tests:/tests -v /home/cvmocanu/temp/reports:/reports --name testerum testerum:1.2
+export version=3.1.19
+docker run --rm -v /home/cvmocanu/temp/tests:/tests -v /home/cvmocanu/temp/reports:/reports --name testerum testerum:$version
 

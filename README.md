@@ -52,7 +52,8 @@ To see what command-line arguments are accepted by the Testerum Runner, use ``--
 ```shell script
 docker run --rm \
     --volume /path/to/testerum/tests-project-directory:/tests \
-    testerum/testerum:latest
+    testerum/testerum:latest \
+    --help
 ```
 
 You should not pass the ``--repository-directory`` and ``--managed-reports-directory`` arguments, since these are already included (and point to ``/tests`` and ``/reports`` directories inside the docker container).

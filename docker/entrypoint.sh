@@ -12,5 +12,5 @@ echo "Starting Testerum Runner..."
 exec "${TESTERUM_DIR}/runner/bin/testerum-runner.sh" \
     --repository-directory=/tests \
     --managed-reports-directory=/reports \
-    --setting testerum.selenium.driver.headless=true
-
+    --setting testerum.selenium.driver.headless=true \
+    "$@"

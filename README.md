@@ -11,7 +11,8 @@ This image can be used to easily run Testerum tests in a CI/CD environment.
 
 # Supported tags and respective ``Dockerfile`` links
 
-* [``3.1.20``, ``latest``](https://github.com/testerum/testerum-docker/blob/release-3.1.20/Dockerfile)
+* [``3.2.1``, ``latest``](https://github.com/testerum/testerum-docker/blob/release-3.2.1/Dockerfile)
+* [``3.1.20``](https://github.com/testerum/testerum-docker/blob/release-3.1.20/Dockerfile)
 
 # What is Testerum?
 
@@ -62,7 +63,7 @@ More information about the command-line arguments can be found on the [Testerum 
 
 ## Note on the user mapping in Linux
 
-This image will create files on the host computer, inside the mapped reports directory. These files will be owned by the user and the group with id ``1000``. In the majority of cases, this is the first non-root user, so everything will have the same permissions as the user that regularly uses that computer/laptop. If you customized your user ID or have a different setup, you may have to change the owner of the reports directory, before you will be able to user the reports:
+This image will create files on the host computer, inside the mapped reports directory. These files will be owned by the user and the group with id ``1000``. In the majority of cases, this is the first non-root user, so everything will have the same permissions as the user that regularly uses that computer/laptop. If you customized your user ID or have a different setup, you may have to change the owner of the reports directory, before you will be able to use the reports:
 
 ```shell script
 sudo chown myuser: -R /path/to/where/the-reports-will-be-written

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-export version=3.2.1
+export version=5.0.2
 docker build \
     --build-arg testerum_version=$version \
     --tag testerum/testerum:$version \

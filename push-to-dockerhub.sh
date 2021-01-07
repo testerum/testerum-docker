@@ -5,6 +5,6 @@
 # docker login --username=yourhubusername --email=youremail@company.com
 #
 
-export version=3.2.1
+export version=5.0.2
 docker push docker.io/testerum/testerum:${version}
 docker push docker.io/testerum/testerum:latest

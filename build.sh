@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
-export version=5.0.2
+script_dir="$(dirname "${0}")"
+source "${script_dir}/common.sh"
+
 docker build \
-    --build-arg testerum_version=$version \
-    --tag testerum/testerum:$version \
+    --build-arg testerum_version=${testerum_version} \
+    --tag testerum/testerum:${testerum_version} \
     --tag testerum/testerum:latest \
     .

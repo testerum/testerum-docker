@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
-export version=3.2.1
-docker run --rm -v /home/cvmocanu/temp/tests:/tests -v /home/cvmocanu/temp/reports:/reports --name testerum testerum/testerum:$version
+script_dir="$(dirname "${0}")"
+source "${script_dir}/common.sh"
 
+docker run \
+    --rm \
+    -v /home/cvmocanu/temp/testerum/tests:/tests \
+    -v /home/cvmocanu/temp/testerum/reports:/reports \
+    --name testerum \
+    "testerum/testerum:${testerum_version}"

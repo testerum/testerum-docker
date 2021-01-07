@@ -5,6 +5,8 @@
 # docker login --username=yourhubusername --email=youremail@company.com
 #
 
-export version=5.0.2
-docker push docker.io/testerum/testerum:${version}
+script_dir="$(dirname "${0}")"
+source "${script_dir}/common.sh"
+
+docker push docker.io/testerum/testerum:${testerum_version}
 docker push docker.io/testerum/testerum:latest

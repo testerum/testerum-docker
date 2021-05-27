@@ -1,1 +1,1 @@
-export testerum_version=5.0.3
+export testerum_version=5.2.3

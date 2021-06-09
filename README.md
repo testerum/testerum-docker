@@ -38,7 +38,9 @@ To make it easy to run Selenium Webdriver tests, this image also includes Firefo
 ## Command line examples
 
 ```shell script
-docker run --rm \
+docker run \
+    --rm \
+    --user "$(id -u "${USER}"):$(id -g "${USER}")" \
     --volume /path/to/testerum/tests-project-directory:/tests \
     testerum/testerum:latest
 ```
@@ -46,7 +48,9 @@ docker run --rm \
 If you want to also have access to the test reports (recommended), you also need to mount a directory where the reports will be written:
 
 ```shell script
-docker run --rm \
+docker run \
+    --rm \
+    --user "$(id -u "${USER}"):$(id -g "${USER}")" \
     --volume /path/to/testerum/tests-project-directory:/tests \
     --volume /path/to/where/the-reports-will-be-written:/reports \
     testerum/testerum:latest
@@ -54,7 +58,9 @@ docker run --rm \
 
 To see what command-line arguments are accepted by the Testerum Runner, use ``--help``:
 ```shell script
-docker run --rm \
+docker run \
+    --rm \
+    --user "$(id -u "${USER}"):$(id -g "${USER}")" \
     --volume /path/to/testerum/tests-project-directory:/tests \
     testerum/testerum:latest \
     --help

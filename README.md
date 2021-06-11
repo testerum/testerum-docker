@@ -11,7 +11,8 @@ This image can be used to easily run Testerum tests in a CI/CD environment.
 
 # Supported tags and respective ``Dockerfile`` links
 
-* [``5.3.3``, ``latest``](https://github.com/testerum/testerum-docker/blob/release-5.3.3/Dockerfile)
+* [``5.3.5``, ``latest``](https://github.com/testerum/testerum-docker/blob/release-5.3.5/Dockerfile)
+* [``5.3.3``](https://github.com/testerum/testerum-docker/blob/release-5.3.3/Dockerfile)
 * [``5.2.3``](https://github.com/testerum/testerum-docker/blob/release-5.2.3/Dockerfile)
 * [``5.0.3``](https://github.com/testerum/testerum-docker/blob/release-5.2.3/Dockerfile)
 * [``3.2.1``](https://github.com/testerum/testerum-docker/blob/release-3.2.1/Dockerfile)
